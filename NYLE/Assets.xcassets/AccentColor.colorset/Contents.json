@@ -2,8 +2,8 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "tvos",
-        "reference" : "tintColor"
+        "platform" : "ios",
+        "reference" : "groupTableViewBackgroundColor"
       },
       "idiom" : "universal"
     }

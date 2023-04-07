@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F8CDF5A29DE9E34002B4946 /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5229DE9E33002B4946 /* Tajawal-Regular.ttf */; };
+		3F8CDF5B29DE9E34002B4946 /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5329DE9E33002B4946 /* Tajawal-ExtraBold.ttf */; };
+		3F8CDF5C29DE9E34002B4946 /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5429DE9E34002B4946 /* Tajawal-Medium.ttf */; };
+		3F8CDF5D29DE9E34002B4946 /* Tajawal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5529DE9E34002B4946 /* Tajawal-Light.ttf */; };
+		3F8CDF5E29DE9E34002B4946 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5629DE9E34002B4946 /* OFL.txt */; };
+		3F8CDF5F29DE9E34002B4946 /* Tajawal-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5729DE9E34002B4946 /* Tajawal-ExtraLight.ttf */; };
+		3F8CDF6029DE9E34002B4946 /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5829DE9E34002B4946 /* Tajawal-Bold.ttf */; };
+		3F8CDF6129DE9E34002B4946 /* Tajawal-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5929DE9E34002B4946 /* Tajawal-Black.ttf */; };
+		3F8CDF6329DEA0CA002B4946 /* FarmerSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CDF6229DEA0CA002B4946 /* FarmerSignUpView.swift */; };
 		3FF4A1C729DE583B00A30D6F /* NYLEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1C629DE583B00A30D6F /* NYLEApp.swift */; };
 		3FF4A1C929DE583B00A30D6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1C829DE583B00A30D6F /* ContentView.swift */; };
 		3FF4A1CB29DE583D00A30D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4A1CA29DE583D00A30D6F /* Assets.xcassets */; };
@@ -18,6 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F8CDF5229DE9E33002B4946 /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
+		3F8CDF5329DE9E33002B4946 /* Tajawal-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3F8CDF5429DE9E34002B4946 /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
+		3F8CDF5529DE9E34002B4946 /* Tajawal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Light.ttf"; sourceTree = "<group>"; };
+		3F8CDF5629DE9E34002B4946 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		3F8CDF5729DE9E34002B4946 /* Tajawal-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3F8CDF5829DE9E34002B4946 /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
+		3F8CDF5929DE9E34002B4946 /* Tajawal-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Black.ttf"; sourceTree = "<group>"; };
+		3F8CDF6229DEA0CA002B4946 /* FarmerSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerSignUpView.swift; sourceTree = "<group>"; };
 		3FF4A1C329DE583B00A30D6F /* NYLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF4A1C629DE583B00A30D6F /* NYLEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYLEApp.swift; sourceTree = "<group>"; };
 		3FF4A1C829DE583B00A30D6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +59,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F8CDF5129DE9E1A002B4946 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F8CDF5629DE9E34002B4946 /* OFL.txt */,
+				3F8CDF5929DE9E34002B4946 /* Tajawal-Black.ttf */,
+				3F8CDF5829DE9E34002B4946 /* Tajawal-Bold.ttf */,
+				3F8CDF5329DE9E33002B4946 /* Tajawal-ExtraBold.ttf */,
+				3F8CDF5729DE9E34002B4946 /* Tajawal-ExtraLight.ttf */,
+				3F8CDF5529DE9E34002B4946 /* Tajawal-Light.ttf */,
+				3F8CDF5429DE9E34002B4946 /* Tajawal-Medium.ttf */,
+				3F8CDF5229DE9E33002B4946 /* Tajawal-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3FF4A1BA29DE583B00A30D6F = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +93,7 @@
 		3FF4A1C529DE583B00A30D6F /* NYLE */ = {
 			isa = PBXGroup;
 			children = (
+				3F8CDF5129DE9E1A002B4946 /* Fonts */,
 				3FF4A1D629DE64E600A30D6F /* App */,
 				3FF4A1D529DE64D800A30D6F /* View */,
 				3FF4A1D429DE591A00A30D6F /* Info.plist */,
@@ -80,6 +114,7 @@
 		3FF4A1D529DE64D800A30D6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F8CDF6229DEA0CA002B4946 /* FarmerSignUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,8 +190,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8CDF5E29DE9E34002B4946 /* OFL.txt in Resources */,
+				3F8CDF5A29DE9E34002B4946 /* Tajawal-Regular.ttf in Resources */,
 				3FF4A1CE29DE583D00A30D6F /* Preview Assets.xcassets in Resources */,
 				3FF4A1CB29DE583D00A30D6F /* Assets.xcassets in Resources */,
+				3F8CDF5C29DE9E34002B4946 /* Tajawal-Medium.ttf in Resources */,
+				3F8CDF5D29DE9E34002B4946 /* Tajawal-Light.ttf in Resources */,
+				3F8CDF5B29DE9E34002B4946 /* Tajawal-ExtraBold.ttf in Resources */,
+				3F8CDF6029DE9E34002B4946 /* Tajawal-Bold.ttf in Resources */,
+				3F8CDF5F29DE9E34002B4946 /* Tajawal-ExtraLight.ttf in Resources */,
+				3F8CDF6129DE9E34002B4946 /* Tajawal-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +214,7 @@
 				3FF4A1DE29DE66E400A30D6F /* OwnerSignUp.swift in Sources */,
 				3FF4A1C929DE583B00A30D6F /* ContentView.swift in Sources */,
 				3FF4A1C729DE583B00A30D6F /* NYLEApp.swift in Sources */,
+				3F8CDF6329DEA0CA002B4946 /* FarmerSignUpView.swift in Sources */,
 				3FF4A1DA29DE667100A30D6F /* AccountType.swift in Sources */,
 				3FF4A1DC29DE66A800A30D6F /* FarmerSignUp.swift in Sources */,
 			);
