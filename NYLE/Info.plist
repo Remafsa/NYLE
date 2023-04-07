@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Image Name</key>
+	<string>Logo</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Tajawal-Black.tff</string>
@@ -12,7 +14,5 @@
 		<string>Tajawal-Medium.ttf</string>
 		<string>Tajawal-Regular.ttf</string>
 	</array>
-	<key>Image Name</key>
-	<string>Logo</string>
 </dict>
 </plist>
