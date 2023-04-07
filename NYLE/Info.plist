@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Tajawal-Black.tff</string>
+		<string>Tajawal-Bold.ttf</string>
+		<string>Tajawal-ExtraBold.tff</string>
+		<string>Tajawal-ExtraLight.tff</string>
+		<string>Tajawal-Light.tff</string>
+		<string>Tajawal-Medium.ttf</string>
+		<string>Tajawal-Regular.ttf</string>
+	</array>
+	<key>Image Name</key>
+	<string>Logo</string>
+</dict>
+</plist>
