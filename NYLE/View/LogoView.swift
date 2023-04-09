@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  LogoView.swift
 //  NYLE
 //
-//  Created by Rema Alnssiry on 06/04/2023.
+//  Created by Shoug. on 09/04/2023.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct LogoView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             Image("logo")
@@ -21,14 +21,11 @@ struct ContentView: View {
                 .frame(alignment: .center)
         }
         .padding(.bottom, 50)
-        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .previewLayout(.sizeThatFits)
-           
+        LogoView()
     }
 }

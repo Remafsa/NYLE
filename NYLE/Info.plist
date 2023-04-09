@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Image Name</key>
-	<string>Logo</string>
+	<string>logo</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Tajawal-Black.tff</string>
