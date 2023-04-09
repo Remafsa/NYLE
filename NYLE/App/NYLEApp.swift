@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct NYLEApp: App {
+    @AppStorage ("isOnboarding") var isOnboarding: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+                ContentView()
+            
+            
         }
     }
 }
