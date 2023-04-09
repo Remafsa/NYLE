@@ -15,9 +15,7 @@ struct FarmerSignUpView: View {
     @State private var phoneNumber: String = ""
     @State private var password: String = ""
     @State private var IDNumber: String = ""
-  
  
-  
     
     var body: some View {
         VStack{
@@ -140,7 +138,7 @@ struct FarmerSignUpView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     ) {
                         
-                        TextField("أدخل رقم هويتك", text: $password
+                        TextField("أدخل رقم هويتك", text: $IDNumber
                         )
                         .multilineTextAlignment(.trailing)
                         .frame(height: 50)
