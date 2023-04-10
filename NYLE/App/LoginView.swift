@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Login: View {
+struct LoginView: View {
     // MARK: - PROPERTY
     
     @State private var phoneNumber: String = ""
     @State private var password: String = ""
     @State private var IDNumber: String = ""
     @State var showPassword: Bool = false
-    @AppStorage("isOnboarding") var isOnboarding: Bool = false
+  //  @AppStorage("isOnboarding") var isOnboarding: Bool = false
     
     // MARK: - BODY
     
@@ -22,6 +22,7 @@ struct Login: View {
         
         VStack{
             VStack(alignment: .trailing, spacing: 20) {
+                // Top Section
                 VStack( spacing: 2) {
                     Text("مرحباً، سجل دخولك إلى")
                         .padding([.top, .trailing], 8)
@@ -38,6 +39,7 @@ struct Login: View {
             } //: VSTACK
             .padding(.top,200)
             VStack{
+                // Middle Section
                 Form {
                     VStack(spacing: 9) {
                         
@@ -76,16 +78,12 @@ struct Login: View {
             .scrollContentBackground(.hidden)
             .background(Color.white)
             
-            Button(action: {}){
-                Text("تسجيل دخول")
-                    .font(Font.custom("Tajawal-Bold", size: 18))
-                    .foregroundColor(.white)
-                    .modifier(ButtonStyle(buttonHeight: 60, buttonColor: Color("DarkBlue"), buttonRadius: 10))
-                
-            } //: BUTTON
-            .padding(.bottom, 170)
-            .padding(.horizontal, 35)
+            // Bottom Section
             
+            // Sign in button code in SignInButtonView()
+            SignInButtonView()
+         
+            // Sign in button code in SignUpLinkView()
             SignUpLinkView()
         }
         
@@ -94,7 +92,7 @@ struct Login: View {
     
     struct Login_Previews: PreviewProvider {
         static var previews: some View {
-            Login()
+            LoginView()
         }
     }
     

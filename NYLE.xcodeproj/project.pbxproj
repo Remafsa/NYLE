@@ -20,7 +20,7 @@
 		3FF4A1C929DE583B00A30D6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1C829DE583B00A30D6F /* ContentView.swift */; };
 		3FF4A1CB29DE583D00A30D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4A1CA29DE583D00A30D6F /* Assets.xcassets */; };
 		3FF4A1CE29DE583D00A30D6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4A1CD29DE583D00A30D6F /* Preview Assets.xcassets */; };
-		3FF4A1D829DE665A00A30D6F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1D729DE665900A30D6F /* Login.swift */; };
+		3FF4A1D829DE665A00A30D6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1D729DE665900A30D6F /* LoginView.swift */; };
 		3FF4A1DA29DE667100A30D6F /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1D929DE667100A30D6F /* AccountType.swift */; };
 		3FF4A1DC29DE66A800A30D6F /* FarmerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1DB29DE66A800A30D6F /* FarmerSignUp.swift */; };
 		3FF4A1DE29DE66E400A30D6F /* OwnerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */; };
@@ -28,6 +28,7 @@
 		A01AEDA129E25B0100C87B77 /* CustomShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */; };
 		A01AEDA329E2734D00C87B77 /* SignUpLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA229E2734D00C87B77 /* SignUpLinkView.swift */; };
 		A01AEDA529E282F600C87B77 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA429E282F600C87B77 /* LogoView.swift */; };
+		A01FC37929E3966C000C0170 /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01FC37829E3966C000C0170 /* SignInButtonView.swift */; };
 		A044C8A929E0F85000A40824 /* FarmerSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +48,7 @@
 		3FF4A1CA29DE583D00A30D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF4A1CD29DE583D00A30D6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3FF4A1D429DE591A00A30D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		3FF4A1D729DE665900A30D6F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3FF4A1D729DE665900A30D6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3FF4A1D929DE667100A30D6F /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		3FF4A1DB29DE66A800A30D6F /* FarmerSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerSignUp.swift; sourceTree = "<group>"; };
 		3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSignUp.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapeView.swift; sourceTree = "<group>"; };
 		A01AEDA229E2734D00C87B77 /* SignUpLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLinkView.swift; sourceTree = "<group>"; };
 		A01AEDA429E282F600C87B77 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		A01FC37829E3966C000C0170 /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
 		A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerSignUpButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */,
 				A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */,
 				A01AEDA229E2734D00C87B77 /* SignUpLinkView.swift */,
+				A01FC37829E3966C000C0170 /* SignInButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 			children = (
 				3FF4A1C829DE583B00A30D6F /* ContentView.swift */,
 				3FF4A1C629DE583B00A30D6F /* NYLEApp.swift */,
-				3FF4A1D729DE665900A30D6F /* Login.swift */,
+				3FF4A1D729DE665900A30D6F /* LoginView.swift */,
 				3FF4A1D929DE667100A30D6F /* AccountType.swift */,
 				3FF4A1DB29DE66A800A30D6F /* FarmerSignUp.swift */,
 				3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */,
@@ -227,11 +230,12 @@
 			files = (
 				A01AED9F29E24F3500C87B77 /* OwnerSignUpButton.swift in Sources */,
 				A01AEDA529E282F600C87B77 /* LogoView.swift in Sources */,
-				3FF4A1D829DE665A00A30D6F /* Login.swift in Sources */,
+				3FF4A1D829DE665A00A30D6F /* LoginView.swift in Sources */,
 				3FF4A1DE29DE66E400A30D6F /* OwnerSignUp.swift in Sources */,
 				A01AEDA129E25B0100C87B77 /* CustomShapeView.swift in Sources */,
 				A044C8A929E0F85000A40824 /* FarmerSignUpButton.swift in Sources */,
 				3FF4A1C929DE583B00A30D6F /* ContentView.swift in Sources */,
+				A01FC37929E3966C000C0170 /* SignInButtonView.swift in Sources */,
 				3FF4A1C729DE583B00A30D6F /* NYLEApp.swift in Sources */,
 				3F8CDF6329DEA0CA002B4946 /* FarmerSignUpView.swift in Sources */,
 				A01AEDA329E2734D00C87B77 /* SignUpLinkView.swift in Sources */,
@@ -369,7 +373,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NYLE/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -398,7 +401,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NYLE/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
