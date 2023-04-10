@@ -9,19 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
-            Image("logo")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 110)
-            
-            Text("تربتنا ثريّة .. وأراضينا سخيّة")
-                .foregroundColor(Color("Green"))
-                .font(.system(size: 16))
-                .frame(alignment: .center)
-        }
-        .padding(.bottom, 50)
-        
+   
+       AccountType(titleOne: "هل أنت ", titleTwo: "إختر نوع حسابك")
+       
     }
 }
 
