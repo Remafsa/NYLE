@@ -10,12 +10,12 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView{
-            PofileView()
+            ProfileView()
                 .tabItem{
                     Image(systemName: "person.crop.circle")
                     Text("الحساب الشخصي")
                 }
-
+            
             AgriculturalLandView()
                 .tabItem{
                     Image(systemName:"tree")
@@ -29,7 +29,7 @@ struct MainView: View {
                 }
         }
         
-    
+        
     }
 }
 

@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInButtonView: View {
     
     // MARK: - PROPERTY
-        
+    
     // MARK: - BODY
     
     var body: some View {
@@ -24,13 +24,13 @@ struct SignInButtonView: View {
                 Text("تسجيل دخول")
                     .font(Font.custom("Tajawal-Bold", size: 18))
                     .foregroundColor(Color.white)
-                    .padding(.horizontal, 30)
+                 
             } //: BUTTON
-            .padding(.horizontal, 40)
         }
+        
     }
 }
-                
+
 
 // MARK: - PREVIEW
 

@@ -13,15 +13,7 @@ struct NYLEApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if (isOnboarding) {
-                LoginView()
-            } else {
-               AccountType(titleOne: "هل أنت", titleTwo: "اختر نوع حسابك")
-                
-            }
-            
-            
-            
+            ContentView()
         }
     }
 }

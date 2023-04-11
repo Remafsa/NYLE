@@ -9,11 +9,12 @@ import SwiftUI
 
 struct CustomShapeView: View {
     var body: some View {
-        
-        RoundedRectangle(cornerRadius: 25, style: .continuous)
-            .fill(.white)
-            .frame(width: 375, height: 160)
-            .shadow(radius: 6)
+       
+                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                    .fill(.white)
+                    .frame(width: 375, height: 160)
+                    .shadow(radius: 6)
+      
     }
 }
 

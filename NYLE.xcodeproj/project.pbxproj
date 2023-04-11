@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F259C6E29E4873C00F83385 /* AgriculturalLandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259C6D29E4873C00F83385 /* AgriculturalLandView.swift */; };
 		3F259C7029E4875800F83385 /* AgriculturalEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259C6F29E4875800F83385 /* AgriculturalEquipmentView.swift */; };
-		3F259C7229E4879E00F83385 /* PofileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259C7129E4879E00F83385 /* PofileView.swift */; };
+		3F259C7229E4879E00F83385 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259C7129E4879E00F83385 /* ProfileView.swift */; };
 		3F259C7429E487E000F83385 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259C7329E487E000F83385 /* MainView.swift */; };
 		3F8CDF5A29DE9E34002B4946 /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5229DE9E33002B4946 /* Tajawal-Regular.ttf */; };
 		3F8CDF5B29DE9E34002B4946 /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CDF5329DE9E33002B4946 /* Tajawal-ExtraBold.ttf */; };
@@ -30,7 +30,6 @@
 		3FF4A1DE29DE66E400A30D6F /* OwnerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */; };
 		A01AED9F29E24F3500C87B77 /* OwnerSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */; };
 		A01AEDA129E25B0100C87B77 /* CustomShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */; };
-		A01AEDA329E2734D00C87B77 /* SignUpLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA229E2734D00C87B77 /* SignUpLinkView.swift */; };
 		A01AEDA529E282F600C87B77 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA429E282F600C87B77 /* LogoView.swift */; };
 		A01FC37929E3966C000C0170 /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01FC37829E3966C000C0170 /* SignInButtonView.swift */; };
 		A044C8A929E0F85000A40824 /* FarmerSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */; };
@@ -39,7 +38,7 @@
 /* Begin PBXFileReference section */
 		3F259C6D29E4873C00F83385 /* AgriculturalLandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriculturalLandView.swift; sourceTree = "<group>"; };
 		3F259C6F29E4875800F83385 /* AgriculturalEquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriculturalEquipmentView.swift; sourceTree = "<group>"; };
-		3F259C7129E4879E00F83385 /* PofileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PofileView.swift; sourceTree = "<group>"; };
+		3F259C7129E4879E00F83385 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3F259C7329E487E000F83385 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3F8CDF5229DE9E33002B4946 /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
 		3F8CDF5329DE9E33002B4946 /* Tajawal-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 		3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSignUp.swift; sourceTree = "<group>"; };
 		A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSignUpButton.swift; sourceTree = "<group>"; };
 		A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapeView.swift; sourceTree = "<group>"; };
-		A01AEDA229E2734D00C87B77 /* SignUpLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLinkView.swift; sourceTree = "<group>"; };
 		A01AEDA429E282F600C87B77 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		A01FC37829E3966C000C0170 /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
 		A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerSignUpButton.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */,
 				A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */,
 				A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */,
-				A01AEDA229E2734D00C87B77 /* SignUpLinkView.swift */,
 				A01FC37829E3966C000C0170 /* SignInButtonView.swift */,
 			);
 			path = View;
@@ -157,7 +154,7 @@
 				3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */,
 				3F259C6D29E4873C00F83385 /* AgriculturalLandView.swift */,
 				3F259C6F29E4875800F83385 /* AgriculturalEquipmentView.swift */,
-				3F259C7129E4879E00F83385 /* PofileView.swift */,
+				3F259C7129E4879E00F83385 /* ProfileView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -245,7 +242,7 @@
 				A01AEDA529E282F600C87B77 /* LogoView.swift in Sources */,
 				3FF4A1D829DE665A00A30D6F /* LoginView.swift in Sources */,
 				3FF4A1DE29DE66E400A30D6F /* OwnerSignUp.swift in Sources */,
-				3F259C7229E4879E00F83385 /* PofileView.swift in Sources */,
+				3F259C7229E4879E00F83385 /* ProfileView.swift in Sources */,
 				A01AEDA129E25B0100C87B77 /* CustomShapeView.swift in Sources */,
 				A044C8A929E0F85000A40824 /* FarmerSignUpButton.swift in Sources */,
 				3FF4A1C929DE583B00A30D6F /* ContentView.swift in Sources */,
@@ -253,7 +250,6 @@
 				3FF4A1C729DE583B00A30D6F /* NYLEApp.swift in Sources */,
 				3F259C7429E487E000F83385 /* MainView.swift in Sources */,
 				3F8CDF6329DEA0CA002B4946 /* FarmerSignUpView.swift in Sources */,
-				A01AEDA329E2734D00C87B77 /* SignUpLinkView.swift in Sources */,
 				3FF4A1DA29DE667100A30D6F /* AccountType.swift in Sources */,
 				3F259C6E29E4873C00F83385 /* AgriculturalLandView.swift in Sources */,
 				3FF4A1DC29DE66A800A30D6F /* FarmerSignUp.swift in Sources */,
