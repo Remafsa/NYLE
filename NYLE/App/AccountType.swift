@@ -10,12 +10,12 @@ import SwiftUI
 struct AccountType: View {
     // MARK: - PROPERTY
     
-         var titleOne: String
-         var titleTwo: String
+    var titleOne: String
+    var titleTwo: String
     
     // MARK: - BODY
     var body: some View {
-     
+        NavigationView {
             VStack (alignment: .trailing, spacing: 12) {
                 Text(titleOne)
                     .font(.title)
@@ -28,18 +28,25 @@ struct AccountType: View {
                     .fontWeight(.light)
                     .foregroundColor(Color("DarkBlue"))
                     .padding([.bottom, .trailing], 20)
-                 
-                VStack{
-                    FarmerSignUpButton()
-                } //: VSTACK
                 
-                VStack {
-                    OwnerSignUpButton()
-                    Spacer()
-                } //: VSTACK
                 
+                NavigationLink(
+                    destination: FarmerSignUpView()){
+                        FarmerSignUpButton()
+                    } //: NAVIGATION LINK
+                    .navigationTitle("")
+                
+                NavigationLink(
+                    destination: OwnerSignUp()){
+                        OwnerSignUpButton()
+                        Spacer()
+                        
+                    } //: NAVIGATION LINK
+                    .navigationTitle("")
             } //: VSTACK
             .padding(.vertical, 130)
+            
+        } //: NAVIGATION
     }
 }
 

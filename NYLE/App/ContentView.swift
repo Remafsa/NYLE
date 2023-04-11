@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-   
-       AccountType(titleOne: "هل أنت ", titleTwo: "إختر نوع حسابك")
+       LoginView()
        
     }
 }
