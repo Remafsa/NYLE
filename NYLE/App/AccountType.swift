@@ -37,7 +37,7 @@ struct AccountType: View {
                     .navigationTitle("")
                 
                 NavigationLink(
-                    destination: OwnerSignUp()){
+                    destination: OwnerSignUpView()){
                         OwnerSignUpButton()
                         Spacer()
                         
@@ -45,8 +45,9 @@ struct AccountType: View {
                     .navigationTitle("")
             } //: VSTACK
             .padding(.vertical, 130)
-            
         } //: NAVIGATION
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

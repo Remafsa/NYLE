@@ -27,9 +27,9 @@ struct MainView: View {
                     Text("المعدات الزراعية")
                     
                 }
-        }
-        
-        
+        } //: TABVIEW
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
