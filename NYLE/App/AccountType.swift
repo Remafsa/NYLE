@@ -45,8 +45,9 @@ struct AccountType: View {
                     .navigationTitle("")
             } //: VSTACK
             .padding(.vertical, 130)
-            
         } //: NAVIGATION
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

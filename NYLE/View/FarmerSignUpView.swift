@@ -10,12 +10,12 @@ import SwiftUI
 
 struct FarmerSignUpView: View {
     
-    @State private var FristName: String = ""
-    @State private var LastName: String = ""
+    @State private var firstName: String = ""
+    @State private var lastName: String = ""
     @State private var email: String = ""
     @State private var phoneNumber: String = ""
     @State private var password: String = ""
-    @State private var IDNumber: String = ""
+    @State private var idNumber: String = ""
     
     var body: some View {
         NavigationView {
@@ -46,7 +46,7 @@ struct FarmerSignUpView: View {
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                                     
                             ) {
-                                TextField("أسمك الأول", text: $FristName)
+                                TextField("أسمك الأول", text: $firstName)
                                     .multilineTextAlignment(.trailing)
                                     .frame(height: 50)
                                     .textFieldStyle(PlainTextFieldStyle())
@@ -65,7 +65,7 @@ struct FarmerSignUpView: View {
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                             ) {
                                 
-                                TextField("أسمك الأخير", text: $LastName)
+                                TextField("أسمك الأخير", text: $lastName)
                                     .multilineTextAlignment(.trailing)
                                     .frame(height: 50)
                                     .textFieldStyle(PlainTextFieldStyle())
@@ -138,7 +138,7 @@ struct FarmerSignUpView: View {
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                             ) {
                                 
-                                TextField("أدخل رقم هويتك", text: $password
+                                TextField("أدخل رقم هويتك", text: $idNumber
                                 )
                                 .multilineTextAlignment(.trailing)
                                 .frame(height: 50)
@@ -169,9 +169,10 @@ struct FarmerSignUpView: View {
                     .padding(.top,30)
                     Spacer()
                 } //end of Vstack
-            } //: Navigation
-            
-        }
+            } //: VSTACK
+        } //: NAVIGATION
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     
