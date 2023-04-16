@@ -37,7 +37,7 @@ struct AccountType: View {
                     .navigationTitle("")
                 
                 NavigationLink(
-                    destination: OwnerSignUp()){
+                    destination: OwnerSignUpView()){
                         OwnerSignUpButton()
                         Spacer()
                         

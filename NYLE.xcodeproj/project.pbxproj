@@ -33,6 +33,7 @@
 		A01AEDA529E282F600C87B77 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA429E282F600C87B77 /* LogoView.swift */; };
 		A01FC37929E3966C000C0170 /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01FC37829E3966C000C0170 /* SignInButtonView.swift */; };
 		A044C8A929E0F85000A40824 /* FarmerSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */; };
+		A0BA0BAF29ECB33300F9E025 /* OwnerSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA0BAE29ECB33300F9E025 /* OwnerSignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		A01AEDA429E282F600C87B77 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		A01FC37829E3966C000C0170 /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
 		A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerSignUpButton.swift; sourceTree = "<group>"; };
+		A0BA0BAE29ECB33300F9E025 /* OwnerSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */,
 				A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */,
 				A01FC37829E3966C000C0170 /* SignInButtonView.swift */,
+				A0BA0BAE29ECB33300F9E025 /* OwnerSignUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BA0BAF29ECB33300F9E025 /* OwnerSignUpView.swift in Sources */,
 				3F259C7029E4875800F83385 /* AgriculturalEquipmentView.swift in Sources */,
 				A01AED9F29E24F3500C87B77 /* OwnerSignUpButton.swift in Sources */,
 				A01AEDA529E282F600C87B77 /* LogoView.swift in Sources */,
