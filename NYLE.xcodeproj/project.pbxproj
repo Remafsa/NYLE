@@ -41,6 +41,7 @@
 		A003F05B2A076BA7003625D9 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003F05A2A076BA7003625D9 /* Equipment.swift */; };
 		A003F05E2A076E1C003625D9 /* FarmersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003F05D2A076E1C003625D9 /* FarmersViewModel.swift */; };
 		A003F0602A076E2E003625D9 /* OwnersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003F05F2A076E2E003625D9 /* OwnersViewModel.swift */; };
+		A003F0642A079C34003625D9 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003F0632A079C34003625D9 /* LogoView.swift */; };
 		A01AED9F29E24F3500C87B77 /* OwnerSignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */; };
 		A01AEDA129E25B0100C87B77 /* CustomShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */; };
 		A01FC37929E3966C000C0170 /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01FC37829E3966C000C0170 /* SignInButtonView.swift */; };
@@ -81,6 +82,7 @@
 		A003F05A2A076BA7003625D9 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		A003F05D2A076E1C003625D9 /* FarmersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersViewModel.swift; sourceTree = "<group>"; };
 		A003F05F2A076E2E003625D9 /* OwnersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersViewModel.swift; sourceTree = "<group>"; };
+		A003F0632A079C34003625D9 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSignUpButton.swift; sourceTree = "<group>"; };
 		A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapeView.swift; sourceTree = "<group>"; };
 		A01FC37829E3966C000C0170 /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */,
 				A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */,
 				A01FC37829E3966C000C0170 /* SignInButtonView.swift */,
+				A003F0632A079C34003625D9 /* LogoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				3F259C7429E487E000F83385 /* MainView.swift in Sources */,
 				A003F0602A076E2E003625D9 /* OwnersViewModel.swift in Sources */,
 				3F8CDF6329DEA0CA002B4946 /* FarmerSignUpView.swift in Sources */,
+				A003F0642A079C34003625D9 /* LogoView.swift in Sources */,
 				A003F05B2A076BA7003625D9 /* Equipment.swift in Sources */,
 				3FF4A1DA29DE667100A30D6F /* AccountType.swift in Sources */,
 				3F259C6E29E4873C00F83385 /* AgriculturalLandView.swift in Sources */,
