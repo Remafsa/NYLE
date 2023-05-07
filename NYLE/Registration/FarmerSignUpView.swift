@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import FirebaseAuth
 
 struct FarmerSignUpView: View {
     
@@ -16,6 +16,24 @@ struct FarmerSignUpView: View {
     @State private var phoneNumber: String = ""
     @State private var password: String = ""
     @State private var idNumber: String = ""
+    
+    @State private var errorMessage: String = ""
+    
+    @EnvironmentObject private var model: Model
+    @EnvironmentObject var farmer: FarmersViewModel
+    
+    private var isFormValid: Bool {
+        !firstName.isEmptyOrWhiteSpace && !lastName.isEmptyOrWhiteSpace && !email.isEmptyOrWhiteSpace && !phoneNumber.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && !idNumber.isEmptyOrWhiteSpace
+    }
+    
+//    private func signUp() async {
+//        do {
+//            let result = try await Auth.auth().createUser(withEmail: email, password: password)
+//            try await model.updateDisplayName(for: result.user, displayName: firstName)
+//        } catch {
+//            errorMessage = error.localizedDescription
+//        }
+//    }
     
     var body: some View {
         NavigationView {
@@ -54,6 +72,8 @@ struct FarmerSignUpView: View {
                                     .cornerRadius(16)
                                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                     .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                    .autocapitalization(.none)
+                                    .disableAutocorrection(true)
                                 
                             }// end of stack 1
                             
@@ -73,6 +93,8 @@ struct FarmerSignUpView: View {
                                     .cornerRadius(16)
                                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                     .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                    .autocapitalization(.none)
+                                    .disableAutocorrection(true)
                             }//end of stack 2
                             
                         }// end of 2 section
@@ -91,6 +113,8 @@ struct FarmerSignUpView: View {
                                     .cornerRadius(16)
                                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                     .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                    .autocapitalization(.none)
+                                    .disableAutocorrection(true)
                             }//end of stack 3
                             
                         }// end of 3 section
@@ -109,6 +133,8 @@ struct FarmerSignUpView: View {
                                     .cornerRadius(16)
                                     .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                     .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                    .autocapitalization(.none)
+                                    .disableAutocorrection(true)
                                 
                             }// end of stack 4
                         }// end of 4 section
@@ -128,6 +154,8 @@ struct FarmerSignUpView: View {
                                 .cornerRadius(16)
                                 .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                 .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                .autocapitalization(.none)
+                                .disableAutocorrection(true)
                                 
                             }//end of stack 5
                         }// end of 5 section
@@ -147,6 +175,8 @@ struct FarmerSignUpView: View {
                                 .cornerRadius(16)
                                 .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                 .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                .autocapitalization(.none)
+                                .disableAutocorrection(true)
                             }//end of stack 6
                             
                         }// end of 6 section
@@ -156,7 +186,9 @@ struct FarmerSignUpView: View {
                     .scrollContentBackground(.hidden)
                     .background(Color.white)
                     
-                    Button(action: {}) {
+                    Button(action: {
+                            farmer.signUp(email: email, firstName: firstName, lastName: lastName, password: password, idNumber: idNumber, phoneNumber: phoneNumber)
+                    }) {
                         NavigationLink(destination: MainView()) {
                             Text("تسجيل دخول")
                                 .font(Font.custom("Tajawal-Bold", size: 18))
@@ -165,9 +197,12 @@ struct FarmerSignUpView: View {
                             
                         }// NAVIGATION LINK
                     } //: BUTTOn
+                    .disabled(!isFormValid) // The user can't signUp if one of the registration fields is empty
                     .padding(.horizontal,35)
                     .padding(.top,30)
                     Spacer()
+                    
+                    Text(errorMessage)
                 } //end of Vstack
             } //: VSTACK
         } //: NAVIGATION
@@ -197,7 +232,3 @@ struct FarmerSignUpView: View {
         }
     }
 }
-/* Text("سجل دخولك إلى حساب المزارع")
- .frame(maxWidth: .infinity)
- .multilineTextAlignment(.trailing)
- .font(.title)*/
