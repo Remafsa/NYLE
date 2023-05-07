@@ -1,0 +1,27 @@
+[
+  {
+    "id" : 1,
+    "name" : "جرار",
+    "image" : "tractor"
+  },
+  {
+    "id" : 2,
+    "name" : "معدات الحصاد",
+    "image" : "plough"
+  },
+  {
+    "id" : 3,
+    "name" : "نظام الري",
+    "image" : "irrigation-systems"
+  },
+  {
+    "id" : 4,
+    "name" : "معدات الحديقة",
+    "image" : "equipment"
+  },
+  {
+    "id" : 5,
+    "name" : "معدات الغرس",
+    "image" : "cultipacker"
+  }
+  ]
