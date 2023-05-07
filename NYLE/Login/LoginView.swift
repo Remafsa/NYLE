@@ -6,16 +6,42 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct LoginView: View {
     // MARK: - PROPERTY
     
-    @State private var phoneNumber: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
-    @State private var IDNumber: String = ""
     @State var showPassword: Bool = false
+    @State var signInProcessing: Bool = false
+    @State private var signInErrorMessag: String = ""
+    @State private var errorMessage: String = ""
+    @State private var isLoggedIn = false
     
-    // MARK: - BODY
+    @EnvironmentObject private var model: Model
+    
+    private var isFormValid: Bool {
+        !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace
+    }
+    
+    private func login() {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                
+                print("Login error: \(error.localizedDescription)")
+                
+            } else {
+                // User logged in successfully
+                print("User logged in successfully")
+                isLoggedIn = true
+                
+            }
+        }
+    }
+
+        // MARK: - BODY
     
     var body: some View {
         NavigationView {
@@ -42,7 +68,7 @@ struct LoginView: View {
                     Form {
                         VStack(spacing: 9) {
                             
-                            TextField("أدخل رقم الجوال", text: $phoneNumber)
+                            TextField("أدخل البريد الإلكتروني", text: $email)
                                 .multilineTextAlignment(.trailing)
                                 .frame(height: 50)
                                 .textFieldStyle(PlainTextFieldStyle())
@@ -50,6 +76,8 @@ struct LoginView: View {
                                 .cornerRadius(16)
                                 .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                 .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                .autocapitalization(.none)
+                                .disableAutocorrection(true)
                             
                             HStack {
                                 ZStack {
@@ -61,6 +89,8 @@ struct LoginView: View {
                                         .cornerRadius(16)
                                         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color("Stroke-Grey")))
                                         .background(RoundedRectangle(cornerRadius: 16).fill(Color("Grey")))
+                                        .autocapitalization(.none)
+                                        .disableAutocorrection(true)
                                     Button {
                                         showPassword.toggle()
                                     }
@@ -77,22 +107,24 @@ struct LoginView: View {
                 .scrollContentBackground(.hidden)
                 .background(Color.white)
                 // Bottom Section
-                // Sign in button code in SignInButtonView()
-                // SignInButtonView()
-                Button(action: {} )
-                {
-                    NavigationLink(
-                        destination: MainView()) {
+                
+                Button {
+                         login()
+          
+                } label: {
                             Text("تسجيل دخول")
                                 .font(Font.custom("Tajawal-Bold", size: 18))
                                 .foregroundColor(.white)
                                 .modifier(ButtonStyle(buttonHeight: 60, buttonColor: Color("DarkBlue"), buttonRadius: 10))
-                        }
+                                .padding(.horizontal, 35)
+                                .padding(.top, 30)
                 }// button
-                .padding(.horizontal,35)
-                .padding(.top,30)
+                NavigationLink( destination: MainView(), isActive: $isLoggedIn, label: { EmptyView() } ) .hidden()
+                .disabled(!isFormValid) // The user can't login if one of the registration fields is empty 
+                .padding(.horizontal, 35)
+                .padding(.top, 30)
                 Spacer()
-                
+             
                 // Sign Up code
                 NavigationLink(destination:  AccountType(titleOne: "هل أنت", titleTwo: "اختر نوع حسابك"), label: {
                     Text("سجل الآن")
@@ -105,6 +137,7 @@ struct LoginView: View {
                         .padding(.horizontal)
                 } //: LABEL
                 ) //: NAVOGATIONLINK
+                Text(errorMessage)
             } //: VSTACK
             .navigationTitle("")
             
