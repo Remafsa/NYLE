@@ -41,6 +41,7 @@
 		3FF4A1DA29DE667100A30D6F /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1D929DE667100A30D6F /* AccountType.swift */; };
 		3FF4A1DC29DE66A800A30D6F /* FarmerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1DB29DE66A800A30D6F /* FarmerSignUp.swift */; };
 		3FF4A1DE29DE66E400A30D6F /* OwnerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */; };
+		77D5A7792A0ACC1400AAC30A /* OwnerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D5A7782A0ACC1400AAC30A /* OwnerUIView.swift */; };
 		A003F0422A066215003625D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A003F0412A066214003625D9 /* GoogleService-Info.plist */; };
 		A003F0452A0662ED003625D9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A003F0442A0662ED003625D9 /* FirebaseAuth */; };
 		A003F0472A0662ED003625D9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A003F0462A0662ED003625D9 /* FirebaseFirestore */; };
@@ -99,6 +100,7 @@
 		3FF4A1D929DE667100A30D6F /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		3FF4A1DB29DE66A800A30D6F /* FarmerSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerSignUp.swift; sourceTree = "<group>"; };
 		3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerSignUp.swift; sourceTree = "<group>"; };
+		77D5A7782A0ACC1400AAC30A /* OwnerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerUIView.swift; sourceTree = "<group>"; };
 		A003F0412A066214003625D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A003F04D2A066320003625D9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A003F0502A06644F003625D9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -218,22 +220,19 @@
 		3FF4A1C529DE583B00A30D6F /* NYLE */ = {
 			isa = PBXGroup;
 			children = (
+				77D5A77A2A0ACC3000AAC30A /* OwnerSide */,
 				3F3777362A0538EA009BA47B /* Home */,
 				3F6B60972A028BBE00BB46C9 /* Detail */,
 				3FF4A1D629DE64E600A30D6F /* App */,
 				3FF4A1D529DE64D800A30D6F /* View */,
-
 				A003F0532A0664F7003625D9 /* Registration */,
 				A003F0522A0664DB003625D9 /* Login */,
-				3F8CDF5129DE9E1A002B4946 /* Fonts */,
 				A003F0412A066214003625D9 /* GoogleService-Info.plist */,
-=======
 				3F37773A2A053B2A009BA47B /* Utility */,
 				3F3777392A053B1F009BA47B /* Extension */,
 				3F8CDF5129DE9E1A002B4946 /* Fonts */,
 				3F3777332A0537EA009BA47B /* Model */,
 				3F3777312A053633009BA47B /* Data */,
-
 				3FF4A1D429DE591A00A30D6F /* Info.plist */,
 				3FF4A1CA29DE583D00A30D6F /* Assets.xcassets */,
 				3FF4A1CC29DE583D00A30D6F /* Preview Content */,
@@ -252,20 +251,12 @@
 		3FF4A1D529DE64D800A30D6F /* View */ = {
 			isa = PBXGroup;
 			children = (
-
-=======
-				3F8CDF6229DEA0CA002B4946 /* FarmerSignUpView.swift */,
-
 				A044C8A829E0F85000A40824 /* FarmerSignUpButton.swift */,
 				A01AED9E29E24F3500C87B77 /* OwnerSignUpButton.swift */,
 				A01AEDA029E25B0100C87B77 /* CustomShapeView.swift */,
 				A01FC37829E3966C000C0170 /* SignInButtonView.swift */,
-
 				A003F0632A079C34003625D9 /* LogoView.swift */,
-=======
-				A0BA0BAE29ECB33300F9E025 /* OwnerSignUpView.swift */,
 				3F6B60952A025F7300BB46C9 /* LogoView.swift */,
-
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,15 +264,10 @@
 		3FF4A1D629DE64E600A30D6F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3FF4A1C629DE583B00A30D6F /* NYLEApp.swift */,
 				3FF4A1C829DE583B00A30D6F /* ContentView.swift */,
 				3F259C7329E487E000F83385 /* MainView.swift */,
-
-=======
 				3F6B608F29FF634E00BB46C9 /* LandDetailView.swift */,
 				3FF4A1C629DE583B00A30D6F /* NYLEApp.swift */,
-				3FF4A1D729DE665900A30D6F /* LoginView.swift */,
-
 				3FF4A1D929DE667100A30D6F /* AccountType.swift */,
 				3FF4A1DB29DE66A800A30D6F /* FarmerSignUp.swift */,
 				3FF4A1DD29DE66E400A30D6F /* OwnerSignUp.swift */,
@@ -290,6 +276,14 @@
 				3F259C7129E4879E00F83385 /* ProfileView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		77D5A77A2A0ACC3000AAC30A /* OwnerSide */ = {
+			isa = PBXGroup;
+			children = (
+				77D5A7782A0ACC1400AAC30A /* OwnerUIView.swift */,
+			);
+			path = OwnerSide;
 			sourceTree = "<group>";
 		};
 		A003F04C2A06630C003625D9 /* Models */ = {
@@ -436,11 +430,8 @@
 				3F3777482A054D83009BA47B /* TitleView.swift in Sources */,
 				3F259C7029E4875800F83385 /* AgriculturalEquipmentView.swift in Sources */,
 				A01AED9F29E24F3500C87B77 /* OwnerSignUpButton.swift in Sources */,
-
 				A003F0552A076B73003625D9 /* Farmers.swift in Sources */,
-=======
 				3F6B60962A025F7300BB46C9 /* LogoView.swift in Sources */,
-
 				3FF4A1D829DE665A00A30D6F /* LoginView.swift in Sources */,
 				3F3777352A053827009BA47B /* CategoryModel.swift in Sources */,
 				3F37773C2A053B47009BA47B /* CodableBundleExtension.swift in Sources */,
@@ -453,24 +444,19 @@
 				A003F05E2A076E1C003625D9 /* FarmersViewModel.swift in Sources */,
 				A01FC37929E3966C000C0170 /* SignInButtonView.swift in Sources */,
 				3FF4A1C729DE583B00A30D6F /* NYLEApp.swift in Sources */,
-
 				A003F0512A06644F003625D9 /* String+Extensions.swift in Sources */,
 				A003F0572A076B7E003625D9 /* Owners.swift in Sources */,
 				A003F0592A076B89003625D9 /* Lands.swift in Sources */,
-=======
 				3F6B60942A025DC900BB46C9 /* NavigationBarView.swift in Sources */,
 				3F37773E2A053BF7009BA47B /* Constant.swift in Sources */,
-
 				3F259C7429E487E000F83385 /* MainView.swift in Sources */,
 				A003F0602A076E2E003625D9 /* OwnersViewModel.swift in Sources */,
 				3F8CDF6329DEA0CA002B4946 /* FarmerSignUpView.swift in Sources */,
-
 				A003F0642A079C34003625D9 /* LogoView.swift in Sources */,
 				A003F05B2A076BA7003625D9 /* Equipment.swift in Sources */,
-=======
+				77D5A7792A0ACC1400AAC30A /* OwnerUIView.swift in Sources */,
 				3F3777442A05457E009BA47B /* SectionView.swift in Sources */,
 				3F3777422A054504009BA47B /* CategoryGridView.swift in Sources */,
-
 				3FF4A1DA29DE667100A30D6F /* AccountType.swift in Sources */,
 				3F3777382A05398D009BA47B /* CategoryItemView.swift in Sources */,
 				3F6B60992A028BE300BB46C9 /* NavigationBarDetailView.swift in Sources */,
