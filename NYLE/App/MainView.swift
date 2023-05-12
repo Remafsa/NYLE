@@ -27,6 +27,11 @@ struct MainView: View {
                     Text("المعدات الزراعية")
                     
                 }
+            MainMessagesView()
+                .tabItem{
+                    Image(systemName: "message.fill")
+                    Text("المحادثه")
+               }
         } //: TABVIEW
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)

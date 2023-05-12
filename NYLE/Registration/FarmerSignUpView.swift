@@ -42,7 +42,7 @@ struct FarmerSignUpView: View {
                     VStack( spacing:2){
                         Text("سجل دخولك إلى ")
                             .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(.title)
+                            .font(.title) 
                             .foregroundColor(Color("DarkBlue"))
                         Text("حساب المزارع ")
                             .font(.largeTitle)
