@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 struct FarmerSignUpView: View {
     
@@ -16,24 +17,39 @@ struct FarmerSignUpView: View {
     @State private var phoneNumber: String = ""
     @State private var password: String = ""
     @State private var idNumber: String = ""
+    @State private var isSignedIn = false
     
-    @State private var errorMessage: String = ""
-    
-    @EnvironmentObject private var model: Model
-    @EnvironmentObject var farmer: FarmersViewModel
     
     private var isFormValid: Bool {
         !firstName.isEmptyOrWhiteSpace && !lastName.isEmptyOrWhiteSpace && !email.isEmptyOrWhiteSpace && !phoneNumber.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace && !idNumber.isEmptyOrWhiteSpace
     }
     
-//    private func signUp() async {
-//        do {
-//            let result = try await Auth.auth().createUser(withEmail: email, password: password)
-//            try await model.updateDisplayName(for: result.user, displayName: firstName)
-//        } catch {
-//            errorMessage = error.localizedDescription
-//        }
-//    }
+  
+    func signUp() {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            guard let user = authResult?.user, error == nil else {
+                print("Error: \(error!.localizedDescription)")
+                return
+            }
+            let userData = [
+                "firstName": firstName,
+                "lastName": lastName,
+                "email": email,
+                "idNumber": idNumber,
+                "phoneNumber": phoneNumber,
+                "password": password
+            ]
+            let db = Firestore.firestore()
+            db.collection("Farmers").document(user.uid).setData(userData) { error in
+                if let error = error {
+                    print("Error adding user data: \(error.localizedDescription)")
+                } else {
+                    isSignedIn = true
+                    print("User data added successfully!")
+                }
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -42,7 +58,7 @@ struct FarmerSignUpView: View {
                     VStack( spacing:2){
                         Text("سجل دخولك إلى ")
                             .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(.title) 
+                            .font(.title)
                             .foregroundColor(Color("DarkBlue"))
                         Text("حساب المزارع ")
                             .font(.largeTitle)
@@ -187,22 +203,21 @@ struct FarmerSignUpView: View {
                     .background(Color.white)
                     
                     Button(action: {
-                            farmer.signUp(email: email, firstName: firstName, lastName: lastName, password: password, idNumber: idNumber, phoneNumber: phoneNumber)
+                        signUp()
                     }) {
-                        NavigationLink(destination: MainView()) {
-                            Text("تسجيل دخول")
-                                .font(Font.custom("Tajawal-Bold", size: 18))
-                                .foregroundColor(.white)
-                                .modifier(ButtonStyle(buttonHeight: 60, buttonColor: Color("DarkBlue"), buttonRadius: 10))
-                            
-                        }// NAVIGATION LINK
-                    } //: BUTTOn
-                    .disabled(!isFormValid) // The user can't signUp if one of the registration fields is empty
-                    .padding(.horizontal,35)
-                    .padding(.top,30)
+                        Text("تسجيل دخول")
+                            .font(Font.custom("Tajawal-Bold", size: 18))
+                            .foregroundColor(.white)
+                            .modifier(ButtonStyle(buttonHeight: 60, buttonColor: Color("DarkBlue"), buttonRadius: 10))
+                            .padding(.horizontal,35)
+                            .padding(.top,30)
+                    } //: BUTTON
+                    NavigationLink( destination: MainView(), isActive: $isSignedIn, label: { EmptyView() } ) .hidden() //: NAVIGATION LINK
+                        .disabled(!isFormValid) // The user can't signUp if one of the registration fields is empty
+                        .padding(.horizontal,35)
+                         .padding(.top,30)
                     Spacer()
-                    
-                    Text(errorMessage)
+                        .navigationTitle("")
                 } //end of Vstack
             } //: VSTACK
         } //: NAVIGATION
@@ -214,6 +229,7 @@ struct FarmerSignUpView: View {
     struct FarmerSignUpView_Previews: PreviewProvider {
         static var previews: some View {
             FarmerSignUpView()
+                .background(colorBackground)
         }
     }
     

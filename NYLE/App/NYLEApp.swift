@@ -22,8 +22,6 @@ struct NYLEApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    @EnvironmentObject var user: FarmersViewModel
-    @StateObject private var model = Model()
     
     var body: some Scene {
         WindowGroup {
