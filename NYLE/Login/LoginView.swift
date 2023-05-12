@@ -16,10 +16,7 @@ struct LoginView: View {
     @State var showPassword: Bool = false
     @State var signInProcessing: Bool = false
     @State private var signInErrorMessag: String = ""
-    @State private var errorMessage: String = ""
     @State private var isLoggedIn = false
-    
-    @EnvironmentObject private var model: Model
     
     private var isFormValid: Bool {
         !email.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace
@@ -40,8 +37,8 @@ struct LoginView: View {
             }
         }
     }
-
-        // MARK: - BODY
+    
+    // MARK: - BODY
     
     var body: some View {
         NavigationView {
@@ -109,22 +106,22 @@ struct LoginView: View {
                 // Bottom Section
                 
                 Button {
-                         login()
-          
+                    login()
+                    
                 } label: {
-                            Text("تسجيل دخول")
-                                .font(Font.custom("Tajawal-Bold", size: 18))
-                                .foregroundColor(.white)
-                                .modifier(ButtonStyle(buttonHeight: 60, buttonColor: Color("DarkBlue"), buttonRadius: 10))
-                                .padding(.horizontal, 35)
-                                .padding(.top, 30)
+                    Text("تسجيل دخول")
+                        .font(Font.custom("Tajawal-Bold", size: 18))
+                        .foregroundColor(.white)
+                        .modifier(ButtonStyle(buttonHeight: 60, buttonColor: Color("DarkBlue"), buttonRadius: 10))
+                        .padding(.horizontal, 35)
+                        .padding(.top, 30)
                 }// button
                 NavigationLink( destination: MainView(), isActive: $isLoggedIn, label: { EmptyView() } ) .hidden()
-                .disabled(!isFormValid) // The user can't login if one of the registration fields is empty 
-                .padding(.horizontal, 35)
-                .padding(.top, 30)
+                    .disabled(!isFormValid) // The user can't login if one of the registration fields is empty
+                    .padding(.horizontal, 35)
+                    .padding(.top, 30)
                 Spacer()
-             
+                
                 // Sign Up code
                 NavigationLink(destination:  AccountType(titleOne: "هل أنت", titleTwo: "اختر نوع حسابك"), label: {
                     Text("سجل الآن")
@@ -137,13 +134,13 @@ struct LoginView: View {
                         .padding(.horizontal)
                 } //: LABEL
                 ) //: NAVOGATIONLINK
-                Text(errorMessage)
             } //: VSTACK
-            .navigationTitle("")
             
+            .navigationTitle("")
         } //: NAVIGATION
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        
     }
 }
 
@@ -152,9 +149,9 @@ struct Login_Previews: PreviewProvider {
         LoginView(didCompleteLoginProcess: {
             
         })
-        }
-    
     }
+    
+}
 
 
 struct ButtonStyle: ViewModifier {

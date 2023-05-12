@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 struct OwnerSignUpView: View {
     @State private var OwnerFirstName: String = ""
@@ -14,23 +15,39 @@ struct OwnerSignUpView: View {
     @State private var OwnerPhoneNumber: String = ""
     @State private var OwnerPassword: String = ""
     @State private var OwnerIDNumber: String = ""
-    
-    @State private var errorMessage: String = ""
-    
-    @EnvironmentObject private var model: Model
-    
+    @State private var isSignedIn = false
+        
     private var isFormValid: Bool {
         !OwnerFirstName.isEmptyOrWhiteSpace && !OwnerLastName.isEmptyOrWhiteSpace && !OwnerEmail.isEmptyOrWhiteSpace && !OwnerPhoneNumber.isEmptyOrWhiteSpace && !OwnerPassword.isEmptyOrWhiteSpace && !OwnerIDNumber.isEmptyOrWhiteSpace
     }
     
-    private func signUp() async {
-        do {
-            let result = try await Auth.auth().createUser(withEmail: OwnerEmail, password: OwnerPassword)
-            try await model.updateDisplayName(for: result.user, displayName: OwnerFirstName)
-        } catch {
-            errorMessage = error.localizedDescription
+
+    private func signUp() {
+        Auth.auth().createUser(withEmail: OwnerEmail, password: OwnerPassword) { authResult, error in
+            guard let user = authResult?.user, error == nil
+         else {
+                    print("Error: \(error!.localizedDescription)")
+                    return
+                }
+                let userData = [
+                    "firstName": OwnerFirstName,
+                    "lastName": OwnerLastName,
+                    "email": OwnerEmail,
+                    "idNumber": OwnerIDNumber,
+                    "phoneNumber": OwnerPhoneNumber,
+                    "password": OwnerPassword
+                ]
+                let db = Firestore.firestore()
+                db.collection("Owners").document(user.uid).setData(userData) { error in
+                    if let error = error {
+                        print("Error adding user data: \(error.localizedDescription)")
+                    } else {
+                        isSignedIn = true
+                        print("User data added successfully!")
+                    }
+                }
+            }
         }
-    }
     
     var body: some View {
         NavigationView {
@@ -184,34 +201,34 @@ struct OwnerSignUpView: View {
                     .scrollContentBackground(.hidden)
                     .background(Color.white)
                     
-                    Button {
-                        Task {
-                            await signUp()
-                        }
-                    } label: {
-                        NavigationLink(destination: MainView()) {
+                    Button(action: {
+                        signUp()
+                        }) {
                             Text("تسجيل دخول")
                                 .font(Font.custom("Tajawal-Bold", size: 18))
                                 .foregroundColor(.white)
                                 .modifier(ButtonStyle(buttonHeight: 60, buttonColor: Color("DarkBlue"), buttonRadius: 10))
-                            
-                        } //: NAVIGATION LINK
+                                .padding(.horizontal,35)
+                                .padding(.top,30)
                     } //: BUTTON
+                    NavigationLink( destination: MainView(), isActive: $isSignedIn, label: { EmptyView() } ) .hidden() //: NAVIGATION LINK
                     .disabled(!isFormValid) // The user can't signUp if one of the registration fields is empty
                     .padding(.horizontal,35)
                     .padding(.top,30)
                     Spacer()
                     
-                    Text(errorMessage)
                 } //end of Vstack
             }
+            .navigationTitle("")
         } //: NAVIGATION VIEW
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     struct OwnerSignUpView_Previews: PreviewProvider {
         static var previews: some View {
             OwnerSignUpView()
-                .environmentObject(Model())
+                .background(colorBackground)
         }
     }
     struct ButtonStyle: ViewModifier {
