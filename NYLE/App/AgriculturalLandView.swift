@@ -23,6 +23,7 @@ struct AgriculturalLandView: View {
             }
         }//VSTACK
         .ignoresSafeArea(.all, edges: .top)
+        .background(colorBackground.ignoresSafeArea(.all, edges: .all))
 
         
     }

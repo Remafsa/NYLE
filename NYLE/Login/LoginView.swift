@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct LoginView: View {
     // MARK: - PROPERTY
-    
+    let didCompleteLoginProcess: () -> ()
     @State private var email: String = ""
     @State private var password: String = ""
     @State var showPassword: Bool = false
@@ -149,9 +149,13 @@ struct LoginView: View {
 
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(didCompleteLoginProcess: {
+            
+        })
+        }
+    
     }
-}
+
 
 struct ButtonStyle: ViewModifier {
     

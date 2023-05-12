@@ -30,8 +30,9 @@ struct NYLEApp: App {
             if Auth.auth().currentUser != nil {
                 MainView()
             } else {
-                LoginView()
-            }
+                LoginView(didCompleteLoginProcess:{}
+                )
+        }
         }
     }
 }

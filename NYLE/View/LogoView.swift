@@ -4,11 +4,6 @@
 //
 
 //  Created by Shoug. on 07/05/2023.
-=======
-//  Created by Rema Alnssiry on 03/05/2023.
-
-//
-
 import SwiftUI
 
 struct LogoView: View {
