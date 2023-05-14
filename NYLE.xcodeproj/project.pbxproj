@@ -15,7 +15,6 @@
 		3F3777382A05398D009BA47B /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3777372A05398D009BA47B /* CategoryItemView.swift */; };
 		3F37773C2A053B47009BA47B /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37773B2A053B47009BA47B /* CodableBundleExtension.swift */; };
 		3F37773E2A053BF7009BA47B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37773D2A053BF7009BA47B /* Constant.swift */; };
-		3F3777402A0540E4009BA47B /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F37773F2A0540E3009BA47B /* category.json */; };
 		3F3777422A054504009BA47B /* CategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3777412A054504009BA47B /* CategoryGridView.swift */; };
 		3F3777442A05457E009BA47B /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3777432A05457E009BA47B /* SectionView.swift */; };
 		3F3777482A054D83009BA47B /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3777472A054D83009BA47B /* TitleView.swift */; };
@@ -404,7 +403,6 @@
 			files = (
 				3F8CDF5E29DE9E34002B4946 /* OFL.txt in Resources */,
 				3F8CDF5A29DE9E34002B4946 /* Tajawal-Regular.ttf in Resources */,
-				3F3777402A0540E4009BA47B /* category.json in Resources */,
 				3FF4A1CE29DE583D00A30D6F /* Preview Assets.xcassets in Resources */,
 				3FF4A1CB29DE583D00A30D6F /* Assets.xcassets in Resources */,
 				3F8CDF5C29DE9E34002B4946 /* Tajawal-Medium.ttf in Resources */,
@@ -597,6 +595,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,6 +624,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
