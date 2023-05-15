@@ -14,7 +14,7 @@ struct OwnerUIView: View {
                 HStack{
                     VStack(spacing:0){
                         Rectangle()
-                            .fill(Color("Color"))
+                            .fill(Color("DarkBlue"))
                             .frame(width: 88, height: 3)
                             .zIndex(1)
                         Image("profile")
@@ -23,7 +23,7 @@ struct OwnerUIView: View {
                             .padding(.top,6)
                             .padding(.bottom,4)
                             .padding(.horizontal,8)
-                            .background(Color("Color 1"))
+                            .background(Color("ColorBackground"))
                             .cornerRadius(10)
                             .shadow(color:Color.black.opacity(0.1), radius:5, x:8, y:8)
                         //.shadow(color:Color.white.opacity(0.5), radius:5, x:-8, y:-8)
@@ -45,7 +45,7 @@ struct OwnerUIView: View {
                 }
                 .padding(.horizontal,20)
                 .padding(.vertical,20)
-                .background(Color("Color 1"))
+                .background(Color("ColorBackground"))
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.1), radius: 5, x:8, y:8)
                 .shadow(color: Color.white.opacity(0.5), radius: 5, x:-8, y:-8)
@@ -71,7 +71,7 @@ struct OwnerUIView: View {
                                 Text("الأراضي")
                                     .font(.title)
                                     .padding(.top,10)
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color("DarkBlue"))
                             }
                         }
                         .padding(.vertical,10)
@@ -94,7 +94,7 @@ struct OwnerUIView: View {
                                 Text("المعدات")
                                     .font(.title)
                                     .padding(.top,10)
-                                    .foregroundColor(Color("Color"))
+                                    .foregroundColor(Color("DarkBlue"))
                             }
                         }
                         .padding(.vertical,10)
@@ -112,31 +112,36 @@ struct OwnerUIView: View {
                      }
                     
                     Spacer(minLength: 70)
-                 //   NavigationStack {
+             
+                
+                //   NavigationStack {
                         HStack{
+                           
                         }
-                        .toolbar {
-                            ToolbarItemGroup(placement: .bottomBar) {
-                              Button(action:{
-                              }){
-                                  NavigationLink(destination: settingView(), label: {
-                                      Text("الاعدادات")
-                                  }
-                                  )
+                       .toolbar {
+                           ToolbarItemGroup(placement: .bottomBar) {
+                             Button(action:{
+                             }){
+                                 NavigationLink(destination: settingView(), label: {
+                                     Text("الاعدادات")
+                                 }
+                                 )
+                             }
+                                 
+                              Spacer()
+                                
+                               Button("الرسائل") {
                               }
-                                Spacer()
                                 
-                                Button("الرسائل") {
-                                }
-                                
-                            }
+                           }
                             
-                        }
-                //    }
-                    .background(Color("Color 2").edgesIgnoringSafeArea(.all))
-                    .foregroundColor(Color("Color"))
-                    .navigationTitle("الملف الشخصي")
-                    .offset(y:-40)
+                       }
+                      
+                 //  }
+                 .background(Color("Stroke-Grey").edgesIgnoringSafeArea(.all))
+                  .foregroundColor(Color("DarkBlue"))
+                  .navigationTitle("الملف الشخصي")
+                  .offset(y:-30)
                     
                 }
                
@@ -159,10 +164,10 @@ struct landsView:View{
                         NavigationLink(destination:landForm(), label: {
                         Text("Add")
                             .font(.title3)
-                            .foregroundColor(Color("Color"))
+                            .foregroundColor(Color("DarkBlue"))
                             .padding(.vertical,10)
                             .padding(.horizontal,25)
-                            .background(Color("Color 1"))
+                            .background(Color("ColorBackground"))
                             .cornerRadius(10)
                     })
                 }
@@ -189,10 +194,10 @@ struct landsView:View{
                             NavigationLink(destination: eqForm(), label: {
                             Text("Add")
                                 .font(.title3)
-                                .foregroundColor(Color("Color"))
+                                .foregroundColor(Color("DarkBlue"))
                                 .padding(.vertical,10)
                                 .padding(.horizontal,25)
-                                .background(Color("Color 1"))
+                                .background(Color("ColorBackground"))
                                 .cornerRadius(10)
                         })
                     }
@@ -207,13 +212,15 @@ struct landsView:View{
         }
     }
 
+
     //نورا هنا حطي الاعدادات بس لا تغيرين اسم الstruct
-    struct settingView:View{
+struct settingView:View{
         var body:some View{
             VStack{
                 Text("جزئية نورا")
-                    .navigationTitle("الاعدادات")
             }
+            .navigationTitle("الاعدادات")
+            .offset(y:-40)
         }
     }
     
@@ -245,8 +252,3 @@ struct eqForm:View{
     
 
 
-struct OwnerUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        OwnerUIView()
-    }
-}
