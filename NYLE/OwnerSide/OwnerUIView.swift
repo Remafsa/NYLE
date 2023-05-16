@@ -217,12 +217,121 @@ struct landsView:View{
 struct settingView:View{
         var body:some View{
             VStack{
-                Text("جزئية نورا")
-            }
+                    
+                    HStack {
+                        Button(action: {} , label: {
+                            Image(systemName: "chevron.left")
+                                .font(.title)
+                                .foregroundColor(Color("DarkBlue"))
+                        })
+                        
+                        Spacer()
+                        
+                     
+                            
+                            Button(action: {}, label: {
+                                Text("المعلومات الشخصية")
+                                    .font(.title3)
+                                    .foregroundColor(Color("DarkBlue"))
+                            })
+                        } //: HSTACK
+                        .padding(.top,20)
+                        .padding(.bottom,20)
+                        .padding(.leading,15)
+                        .padding(.trailing,15)
+                        
+                        HStack {
+                            Button(action: {} , label: {
+                                Image(systemName: "chevron.left")
+                                    .font(.title)
+                                    .foregroundColor(Color("DarkBlue"))
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {}, label: {
+                                Text(" العقود")
+                                    .font(.title3)
+                                    .foregroundColor(Color("DarkBlue"))
+                            })
+                        } //: HSTACK
+
+                        .padding(.top,20)
+                        .padding(.bottom,20)
+                        .padding(.leading,15)
+                        .padding(.trailing,15)
+
+            HStack {
+                                Button(action: {} , label: {
+                                    Image(systemName: "chevron.left")
+                                        .font(.title)
+                                        .foregroundColor(Color("DarkBlue"))
+                                })
+                                
+                                Spacer()
+                                
+                                Button(action: {}, label: {
+                                    Text(" سجلات البيع والشراء")
+                                        .font(.title3)
+                                        .foregroundColor(Color("DarkBlue"))
+                                })
+                            } //: HSTACK
+                            .padding(.top,20)
+                            .padding(.bottom,20)
+                            .padding(.leading,15)
+                            .padding(.trailing,15)
+                        HStack {
+                            Button(action: {} , label: {
+                                Image(systemName: "iphone.radiowaves.left.and.right")
+                                    .font(.title)
+                                    .foregroundColor(Color("DarkBlue"))
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {}, label: {
+                                Text(" تواصل معنا ")
+                                    .font(.title3)
+                                    .foregroundColor(Color("DarkBlue"))
+                            })
+                        } //: HSTACK
+                        .padding(.top,20)
+                        .padding(.bottom,20)
+                        .padding(.leading,15)
+                        .padding(.trailing,15)
+                        
+                        HStack {
+                            Button(action: {} , label: {
+                                Image(systemName:"figure.walk.arrival")
+                                    .font(.title)
+                                    .foregroundColor(.red)
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {}, label: {
+                                Text(" تسجيل الخروج")
+                                    .font(.title3)
+                                    .foregroundColor(.red)
+                                    .bold()
+                            })
+                        } //: HSTACK
+                        .padding(.top,20)
+                        .padding(.bottom,20)
+                        .padding(.leading,15)
+                        .padding(.trailing,15)
+
+
+                }// :Vstack
             .navigationTitle("الاعدادات")
             .offset(y:-40)
-        }
-    }
+                } // : Body
+            } // : View
+
+            
+           
+        
+    
     
   // نورا هنا حطي نموذج الارض ونفس الشي لا تغيرين
 struct landForm:View{
