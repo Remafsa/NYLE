@@ -226,20 +226,170 @@ struct settingView:View{
     
   // نورا هنا حطي نموذج الارض ونفس الشي لا تغيرين
 struct landForm:View{
-    var body:some View{
-        VStack{
-            Text("جزئية نورا")
-                .navigationTitle("اضافة ارض")
+    @State private var earthName = ""
+    @State private var landNumber = ""
+    @State private var price = ""
+    @State private var contractDuration = ""
+    @State private var landArea = ""
+    @State private var region = ""
+    @State private var city = ""
+    @State private var postalCode = ""
+    @State private var address = ""
+    @State private var condition = ""
+    @State private var soilType = ""
+    @State private var description = ""
+    
+    var body: some View {
+      
+        Form {
+            
+            Section(header: Text("بيانات الأرض"))
+            {
+                TextField("اسم الأرض", text: $earthName)
+                    .offset(x:250,y:5)
+                TextField("رقم الأرض", text: $landNumber)
+                    .offset(x:255,y:5)
+                
+                TextField("السعر (ريال سعودي)", text: $price)
+                    .offset(x:185,y:5)
+                
+                TextField("مدة العقد (شهريًا)", text: $contractDuration)
+                    .offset(x:200,y:5)
+                
+                TextField("مساحة الأرض (م²)", text: $landArea)
+                    .offset(x:200,y:5)
+                
+            }
+            .foregroundColor(Color("Green"))
+            
+            Section(header: Text("بيانات الموقع")) {
+                TextField("المنطقة", text: $region)
+                    .offset(x:260,y:5)
+                TextField("المدينة", text: $city)
+                    .offset(x:270,y:5)
+                TextField("الرمز البريدي", text: $postalCode)
+                    .offset(x:235,y:5)
+                TextField("العنوان", text: $address)
+                    .offset(x:270,y:5)
+            }
+            .foregroundColor(Color("Green"))
+            
+            Section(header: Text("الوصف")) {
+                Picker("الحالة", selection: $condition) {
+                    Text("للإيجار").tag("Rent")
+                    Text("للبيع").tag("Sell")
+                    
+                }
+                
+                TextField("نوع التربة", text: $soilType)
+                    .offset(x:260,y:5)
+                // Add code to handle photo upload
+                
+                TextField("الوصف", text: $description)
+                    .offset(x:270,y:5)
+            }
+            .foregroundColor(Color("Green"))
+            
+            Button(action: {
+                // Add code to handle button action
+            }) {
+                
+                
+                Text("حفظ")
+                    .offset(x:140,y:5)
+                    .foregroundColor(Color("ColorBackground"))
+                    .padding(.vertical,10)
+                    .padding(.horizontal,25)
+                    .background(Color("Darkblue"))
+                    .cornerRadius(10)
+            }
         }
-    }
-}
+              .navigationTitle("اضافة ارض")
+          
+          }
+      
+              
+        }
+    
+
 // هنا حطي نموذج المعدات
 struct eqForm:View{
+    @State private var EquipmentName = ""
+     @State private var EquipmentID  = ""
+     @State private var Equipmentprice = ""
+     @State private var EquipmentConTerm = ""
+
+     @State private var EquipmentCountry = ""
+     @State private var EquipmentCity = ""
+     @State private var EquipmentZipCode = ""
+     @State private var EquipmentAdress  = ""
+     @State private var condition = ""
+     @State private var EquipmentType = ""
+     @State private var EquipmentDescription = ""
+
+
     var body:some View{
-        VStack{
-            Text("جزئية نورا")
+        Form {
+              Section(header: Text("بيانات المُعدة"))
+              {
+                  TextField("اسم المُعدة", text: $EquipmentName)
+                      .offset(x:250,y:5)
+                  TextField("رقم المُعدة", text: $EquipmentID )
+                      .offset(x:255,y:5)
+
+                  TextField("السعر (ريال سعودي)", text: $Equipmentprice)
+                      .offset(x:185,y:5)
+
+                  TextField("مدة العقد (شهريًا)", text: $EquipmentConTerm)
+                      .offset(x:200,y:5)
+
+              }
+              .foregroundColor(Color("Green"))
+              
+              Section(header: Text("بيانات الموقع")) {
+                  TextField("المنطقة", text: $EquipmentCountry)
+                      .offset(x:260,y:5)
+                  TextField("المدينة", text: $EquipmentCity )
+                      .offset(x:270,y:5)
+                  TextField("الرمز البريدي", text: $EquipmentZipCode)
+                      .offset(x:235,y:5)
+                  TextField("العنوان", text: $EquipmentAdress )
+                      .offset(x:270,y:5)
+              }
+              .foregroundColor(Color("Green"))
+              
+              Section(header: Text("الوصف")) {
+                  Picker("الحالة", selection: $condition) {
+                      Text("للإيجار").tag("Rent")
+                      Text("للبيع").tag("Sell")
+                          
+                  }
+                  
+                  
+                  TextField("نوع المُعدة", text: $EquipmentType)
+                      .offset(x:260,y:5)
+                  // Add code to handle photo upload
+                  
+                  TextField("الوصف", text: $EquipmentDescription)
+                      .offset(x:270,y:5)
+              }
+              .foregroundColor(Color("Green"))
+              
+              Button(action: {
+                  // Add code to handle button action
+              }) {
+                  Text("حفظ")
+                      .offset(x:140,y:5)
+                      .foregroundColor(Color("ColorBackground"))
+                      .padding(.vertical,10)
+                      .padding(.horizontal,25)
+                      .background(Color("Darkblue"))
+                      .cornerRadius(10)
+                 
+              }
+          }
                 .navigationTitle("اضافة معدات")
-        }
+        
     }
 }
 
